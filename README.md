@@ -6,7 +6,11 @@
 ## Homebrew 설치
 - terminal 에서 실행
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+- 이어서 작성
+```
+eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 - 정상 설치 여부 확인
 ```
@@ -26,9 +30,14 @@ brew install cask
 brew install mas
 ```
 
-## Brewfile 한 번에 설치하기
+## Brewfile 관리
+- Brewfile 한 번에 설치하기
 ```
 brew bundle
+```
+- brewfile 생성 (최초)
+```
+brew bundle dump
 ```
 
 ## 패키지 관리
